@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 public class TaxValueCalculator implements TaxCalculator {
 
-    public Tax calculateTax(RequestItem item){
+    public Tax calculateTax(RequestItem item) {
         Money net = item.getTotalCost();
         BigDecimal ratio = null;
         String desc = null;

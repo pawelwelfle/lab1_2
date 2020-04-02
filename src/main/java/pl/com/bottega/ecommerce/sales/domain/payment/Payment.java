@@ -33,10 +33,10 @@ public class Payment {
     public Payment rollBack() {
         Id id = Id.generate();
 
-        return  newPayment(id, clientData, amount.multiplyBy(-1));
+        return newPayment(id, clientData, amount.multiplyBy(-1));
     }
 
-    public static Payment newPayment(Id aggregateId, ClientData clientData, Money amount){
+    public static Payment newPayment(Id aggregateId, ClientData clientData, Money amount) {
         return new Payment(aggregateId, clientData, amount);
     }
 }
